@@ -16,6 +16,8 @@
 
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+		<anypoint.username>mrsitech2</anypoint.username>
+		<anypoint.password>Q#%d#-9!zu(@`</anypoint.password>
 	</properties>
 
 	<build>
@@ -33,6 +35,37 @@
 				<configuration>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.mule.tools.maven</groupId>
+				<artifactId>mule-maven-plugin</artifactId>
+				<version>${mule.maven.plugin.version}</version>
+				<extensions>true</extensions>				
+            <configuration>
+		        <cloudHubDeployment>
+		            <uri>https://anypoint.mulesoft.com</uri>
+		            <muleVersion>${mule.version}</muleVersion>
+		            <username>${anypoint.username}</username>
+		            <password>${anypoint.password}</password>
+		            <applicationName>mule-demo-cicd2-test2</applicationName>
+		            <environment>testsandbox</environment>
+					<workerType>Micro</workerType>
+					<workers>1</workers>
+		            <properties>
+		                <key>value</key>
+		            </properties>
+		            <objectStoreV2>true</objectStoreV2> 
+		        </cloudHubDeployment>
+		    </configuration>
+           	<executions>
+               <execution>
+                  <id>deploy</id>
+                  <phase>deploy</phase>
+                  <goals>
+                     <goal>deploy</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
 		</plugins>
 	</build>
 
