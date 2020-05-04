@@ -18,15 +18,12 @@
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 		<anypoint.username>mrsitech2</anypoint.username>
 		<anypoint.password>Q#%d#-9!zu(@`</anypoint.password>
+		<mule.version>4.2.2</mule.version>
 	</properties>
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.0.0</version>
-			</plugin>
+			
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
