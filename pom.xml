@@ -18,7 +18,7 @@
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 		<anypoint.username>mrsitech2</anypoint.username>
 		<anypoint.password>Q#%d#-9!zu(@`</anypoint.password>
-		<mule.version>4.2.2</mule.version>
+		<mule.version>4.3.0</mule.version>
 	</properties>
 
 	<build>
